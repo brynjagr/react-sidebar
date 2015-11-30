@@ -308,7 +308,7 @@ class Sidebar extends React.Component {
 
     return (
       <div {...rootProps}>
-        <div style={sidebarStyle} ref="sidebar">
+        <div className={this.props.sidebarClassName} style={sidebarStyle} ref="sidebar">
           {this.props.sidebar}
         </div>
         <div style={overlayStyle}
@@ -355,6 +355,9 @@ Sidebar.propTypes = {
 
   // callback called when the overlay is clicked
   onSetOpen: React.PropTypes.func,
+
+  // class selectors to be used for the sidebar
+  sidebarClassName: React.PropTypes.string
 };
 
 Sidebar.defaultProps = {
